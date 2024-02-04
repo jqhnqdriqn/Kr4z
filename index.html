@@ -99,8 +99,9 @@
                 alert("Mwa.. labyu !! ❤️ <3");
             } else {
                 var b = document.getElementById("noButton");
-                var maxWidth = document.body.clientWidth - b.offsetWidth;
-                var maxHeight = document.body.clientHeight - b.offsetHeight;
+                
+                var maxWidth = window.innerWidth - b.offsetWidth;
+                var maxHeight = window.innerHeight - b.offsetHeight;
 
                 var i = Math.floor(Math.random() * maxWidth);
                 var j = Math.floor(Math.random() * maxHeight);
@@ -108,11 +109,12 @@
                 i = Math.min(i, maxWidth);
                 j = Math.min(j, maxHeight);
 
-                b.style.position = "absolute";
+                b.style.position = "fixed";
                 b.style.left = i + "px";
                 b.style.top = j + "px";
             }
         }
     </script>
 </body>
+
 </html>
